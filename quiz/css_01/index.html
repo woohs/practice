@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>css 小测</title>
+</head>
+
+<body>
+  <div class="header">
+    
+  </div>
+  <div class="main">
+    <h1>
+      CSS小测布局实例
+    </h1>
+    <div class="body-left part">
+      <h2>代码</h2>
+      <div>
+        <pre class="javascript"
+          style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">/* 公共部分 */</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">dl <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  border<span style="color: #339933;">:</span> 1px solid #ccc<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  line<span style="color: #339933;">-</span>height<span style="color: #339933;">:</span> 1.5em<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  padding<span style="color: #339933;">:</span> 10px<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">dd <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  margin<span style="color: #339933;">:</span> 0px<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  text<span style="color: #339933;">-</span>align<span style="color: #339933;">:</span> right<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  word<span style="color: #339933;">-</span><span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">:</span> break<span style="color: #339933;">-</span>all<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">/* absolute实现 */</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">.<span style="color: #660066;">dl1</span> dt <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  position<span style="color: #339933;">:</span> absolute<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">.<span style="color: #660066;">dl1</span> dd <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  margin<span style="color: #339933;">-</span>left<span style="color: #339933;">:</span> 5em<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">/* flex实现 */</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">.<span style="color: #660066;">dl2</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  display<span style="color: #339933;">:</span> flex<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  flex<span style="color: #339933;">-</span>wrap<span style="color: #339933;">:</span> wrap<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">.<span style="color: #660066;">dl2</span> dt <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  width<span style="color: #339933;">:</span> 5em<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">.<span style="color: #660066;">dl2</span> dd <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  width<span style="color: #339933;">:</span> calc<span style="color: #009900;">&#40;</span><span style="color: #CC0000;">100</span><span style="color: #339933;">%</span> <span style="color: #339933;">-</span> 5em<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">/* float实现 */</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">.<span style="color: #660066;">dl3</span> dt <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  <span style="color: #FF0000;">float</span><span style="color: #339933;">:</span> left<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  width<span style="color: #339933;">:</span> 5em<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">.<span style="color: #660066;">dl3</span> dd <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  overflow<span style="color: #339933;">:</span> hidden<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">/* 原生流体 */</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">.<span style="color: #660066;">dl4</span> dd <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  margin<span style="color: #339933;">:</span> <span style="color: #339933;">-</span>1.5em <span style="color: #CC0000;">0</span> <span style="color: #CC0000;">0</span> 5em<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li></ol></pre>
+      </div>
+    </div>
+    <div class="body-right part">
+      <h2>效果</h2>
+      <div class="input-range">
+        宽度调节(200-500)：<input type="range" min="100" max="600" oninput="demo.style.width = this.value + 'px'">
+        <br />
+        字号调节(12-18)：<input type="range" min="10" max="20" oninput="demo.style.fontSize = this.value + 'px'">
+      </div>
+      <div class="show" id="demo" style="font-size: 14px; width: 300px;">
+
+        <h3>1.absolute实现</h3>
+        <dl class="dl1">
+          <dt>手机系统</dt>
+          <dd>Android</dd>
+          <dt>登陆方式</dt>
+          <dd>QQ互联登陆</dd>
+          <dt>绑定事件</dt>
+          <dd>2019-09-01 01:01:01</dd>
+          <dt>绑定状态</dt>
+          <dd>有效</dd>
+        </dl>
+
+        <h3>2.flex实现</h3>
+        <dl class="dl2">
+          <dt>手机系统</dt>
+          <dd>Android</dd>
+          <dt>登陆方式</dt>
+          <dd>QQ互联登陆</dd>
+          <dt>绑定事件</dt>
+          <dd>2019-09-01 01:01:01</dd>
+          <dt>绑定状态</dt>
+          <dd>有效</dd>
+        </dl>
+
+        <h3>3.float实现</h3>
+        <dl class="dl3">
+          <dt>手机系统</dt>
+          <dd>Android</dd>
+          <dt>登陆方式</dt>
+          <dd>QQ互联登陆</dd>
+          <dt>绑定事件</dt>
+          <dd>2019-09-01 01:01:01</dd>
+          <dt>绑定状态</dt>
+          <dd>有效</dd>
+        </dl>
+
+        <h3>4.流体特性实现</h3>
+        <dl class="dl4">
+          <dt>手机系统</dt>
+          <dd>Android</dd>
+          <dt>登陆方式</dt>
+          <dd>QQ互联登陆</dd>
+          <dt>绑定事件</dt>
+          <dd>2019-09-01 01:01:01</dd>
+          <dt>绑定状态</dt>
+          <dd>有效</dd>
+        </dl>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="footer">
+    我的有底线的
+  </div>
+</body>
+
+</html>
