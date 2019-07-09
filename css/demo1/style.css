@@ -1,0 +1,93 @@
+/* 
+页面结构
+*/
+body {
+  margin: 0;
+}
+.main {
+  background: #B7CBE8;
+  margin: 0px;
+  overflow: hidden;
+}
+.main > h1 {
+  line-height: 40px;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  background: #c1d5eb;
+  font-family: 'kaiti','microsoft yahei';
+  text-shadow: 0px 1px 0px #f2f2f2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.part {
+  background: white;
+  width: 50%;
+  min-height: 400px;
+  margin-bottom: -999em;
+  padding-bottom: 999em;
+}
+.part > h2 {
+  line-height: 30px;
+  margin: 0;
+  font-size: 15px;
+  background: #f0f3f9;
+  padding-left: 10px;
+  border-bottom: 1px solid #ededed;
+  color: #4e4e4e;
+  text-shadow: 0px 1px 0px white;
+  font-family: 'microsoft yahei';
+}
+.body-left {
+  float: left;
+  margin-left: -1px;
+}
+.body-right {
+  float: right; 
+  margin-right: -1px;
+}
+.input-range {
+  padding: 10px;
+}
+.show {
+  padding: 10px;
+}
+.footer {
+  background: #B7CBE8;
+  border-top: 3px solid #A7BFE8;
+  line-height: 1.5;
+  color: #333;
+  font-size: 12px;
+  padding: 15px 0;
+  font-family: 'Lucida Grande',Verdana, Sans-Serif;
+  text-align: center;
+  text-shadow: 0 1px hsla(0,0%,100%,.3);
+}
+
+/* 
+正文
+*/
+
+.demo1 {
+  display: inline-block;
+  background: currentColor;
+  width: 140px;
+  height: 10px;
+  border-top: 10px solid;
+  border-bottom: 10px solid;
+  padding: 35px 0;
+  /* 这里其实关键起作用的还是 background-clip: content-box; 把背景色作用从border-box改为content-box*/
+  background-clip: content-box;
+}
+
+.demo2 {
+  display: inline-block;
+  background: currentColor;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 10px solid;
+  background-clip: content-box;
+  border-radius: 50%;
+}
