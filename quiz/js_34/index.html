@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>js基础测试34 demo</title>
+</head>
+
+<body>
+  <div class="header">
+    
+  </div>
+  <div class="main">
+    <h1>
+      js基础测试34
+    </h1>
+    <div class="body-left part">
+      <h2>代码</h2>
+      <div class="content">
+        
+        <h3>题目</h3>
+        <img src="./quiz.png" />
+
+        <h3>解答</h3>
+        <script>
+          let arr = [1,2,,3];
+
+          // 1. 4
+          // 2.
+          const arr2 = arr.filter(value => value !== null)
+          console.log(arr2);
+          // 3. [NaN,NaN,NaN,NaN]
+          // 4. 合并
+          const arr3 =  [...arr, ...arr2];
+          console.log(arr3);
+          const arr4 = Object.assign([], arr, arr2);
+          console.log(arr4);
+          // 5. 去重
+          const arr5 = [...(new Set(...arr3))]
+          console.log(arr5);
+
+        </script>
+
+        <h3>答案</h3>
+        1. 第一题答对 1分
+        2. 数组空值不会被遍历，所以最简便的方法是：
+        arr = arr.filter(value => true)
+
+        3. parseInt(1, 0); // 1 radix为0自动转换成 10
+
+        答案为：[1, NaN, NaN]
+        4. 数组合并，兼容IE8+
+
+        arr3 = arr.concat(arr2)
+
+        5. set参数为一个可迭代对象
+
+        arr5 = [...new Set(arr3)]
+
+        总分：1分。。。
+        不及格
+
+        总结：对一些api还是记得不太清楚
+
+      </div>
+    </div>
+    <div class="body-right part">
+      <h2>效果</h2>
+      <div class="input-range">
+        宽度调节(200-500)：<input type="range" min="100" max="600" oninput="demo.style.width = this.value + 'px'">
+        <br />
+        字号调节(12-18)：<input type="range" min="10" max="20" oninput="demo.style.fontSize = this.value + 'px'">
+      </div>
+      <div class="show" id="demo" style="font-size: 14px; width: 300px;">
+         
+      </div>
+
+    </div>
+
+  </div>
+  <div class="footer">
+    我的有底线的
+  </div>
+</body>
+
+</html>
