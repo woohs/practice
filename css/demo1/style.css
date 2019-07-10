@@ -43,6 +43,9 @@ body {
   float: left;
   margin-left: -1px;
 }
+.body-left > .content {
+  padding: 12px;
+}
 .body-right {
   float: right; 
   margin-right: -1px;
@@ -150,5 +153,45 @@ body {
   width: 50px;
   height: 50px; 
   background: red;
+}
 
+.demo7:first-line {
+  color: red;
+}
+
+.demo8 > dot {
+  display: inline-block; 
+  height: 1em;
+  line-height: 1;
+  text-align: left;
+  vertical-align: -.25em;
+  overflow: hidden;
+}
+.demo8 > dot::before {
+  display: block;
+  content: '...\A..\A.';
+  white-space: pre-wrap;
+  animation: dot 2s step-start infinite both;
+}
+@keyframes dot {
+  33% { transform: translateY(-2em); }
+  66% { transform: translateY(-1em); }
+}
+
+.demo9 > dot {
+  display: inline-block;
+  width: 10px;
+  overflow: hidden;
+  height: 1em;
+  line-height: 1em;
+  vertical-align: -.25em;
+}
+.demo9 > dot::before {
+  display: block;
+  content: '...';
+  animation: dot2 2s step-start infinite reverse ;
+}
+@keyframes dot2 {
+  33% { transform: translateX(-33%); }
+  66% { transform: translateX(-66%); }
 }
