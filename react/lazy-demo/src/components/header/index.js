@@ -9,7 +9,6 @@ export default class Header extends Component {
         <div className="header-logo">
           <img src={logo} className="logo-img" alt="logo" />
         </div>
-
       </div>
     )
   }

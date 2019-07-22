@@ -1,0 +1,19 @@
+.margin-demo {
+  background: #ccc;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000088;
+}
+
+.margin1 {
+  margin: 20px 10px;
+}
+.margin2 {
+  margin: 20px 10px;
+}
+.margin3 {
+  margin: 20px 10px;
+}
