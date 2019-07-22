@@ -34,6 +34,56 @@
 .footer {
   width: 100%;
   padding: 10px 0px;
-  background: #ccc;
+  background: #282c345e;
   text-align: center;
+  color: #000;
+}
+
+.container {
+  margin: -24px 0 0 0;
+}
+
+.App-left {
+  width: 200px;
+  height: 100vh;
+  float: left;
+  display: fixed;
+  position: fixed;
+  background: #fff;
+  box-shadow: 1px 2px 3px #ccc;
+  z-index: 1;
+}
+
+.App-right {
+  margin-left: 200px;
+  min-height: 100vh;
+  margin-top: 50px;
+  padding: 16px;
+}
+
+.App-nav {
+  padding: 8px;
+  margin: 0;
+}
+
+.App-nav li {
+  list-style: none;
+  margin: 10px;
+}
+
+.App-nav li a {
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #7284ff;
+  border-radius: 4px;
+  box-shadow: 1px 3px 5px #ccc;
+  text-decoration: none;
+  color: #7284ff;
+}
+.App-nav li a:hover {
+  background: #b4eaff8c;
 }

@@ -5,6 +5,7 @@
   right: 0;
   bottom: 0;
   background: #00000099;
+  z-index: 9999;
 }
 
 .modal {
@@ -15,6 +16,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border: 2px solid #ccc;
+  z-index: 9999;
 }
 
 .modal-header {
