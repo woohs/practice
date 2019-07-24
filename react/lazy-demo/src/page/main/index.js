@@ -8,7 +8,7 @@ function Main() {
   return (
     <>
       <h2>WReact</h2>
-      <p>这是一个实验性的react框架</p>
+      <p>这是一个实验性的react组件库，记录个人开发的组件</p>
     </>
   )
 }
