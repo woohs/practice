@@ -16,22 +16,13 @@ export default class ModalDemo extends Component {
   }
 
   handleClick = () => {
-    fetch('https://developer.mozilla.org/zh-CN/docs/Web/API/Blob', {
-    }).then( res => {
-      return res.blob()
-    }).then( response => {
-      var reader = new FileReader();
-      // 这里转换是异步的
-      reader.readAsText(response);
-      const that = this;
-      // 监听转换是否成功
-      reader.addEventListener("loadend", function() {
-          // reader.result 包含转化为类型数组的blob
-          that.setState({
-            htmlStr: reader.result
-          })
-      });
-
+    fetch('http://www.lswz.gov.cn/html/ndbg/2019-03/28/243933/files/8cc8f0c824e74e3dbc06ac3e74355def.pdf')
+    .then( res => res.blob()) // 解析res值为blob
+    .then( response => {
+      const url = URL.createObjectURL(response);
+      this.setState({
+        htmlStr: url
+      })
     })
 
     this.setState(( state ) => ({
@@ -64,6 +55,7 @@ export default class ModalDemo extends Component {
   }
 
   render() {
+    const { htmlStr } = this.state;
     return (
       <div className="margin-demo">
         <h3>Modal 模态框</h3>
@@ -81,7 +73,7 @@ export default class ModalDemo extends Component {
             onClose={this.handleClick} 
             footer={<button onClick={this.handlePrint} style={{float: 'right'}}>打印</button>}
           >
-            <iframe srcDoc={this.state.htmlStr} title='iframe' id="iframe" />
+            <iframe src={htmlStr} title='iframe' id="iframe" />
           </Modal>
         </Suspense>
 
