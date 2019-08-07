@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>async demo</title>
+  <style>
+  #light {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: green;
+  }
+  </style>
+</head>
+<body>
+  <div id="light"></div>
+  <div id="time">0</div>
+  
+  <script>
+
+    function sleep(time) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, time);
+      })
+    }
+
+    async function changeColor(time, color) {
+      document.getElementById('light').style.background = color;
+      await sleep(time);
+    }
+
+    async function main() {
+      while(1) {
+        await changeColor(3000, 'green');
+        await changeColor(2000, 'yellow');
+        await changeColor(1000, 'red');
+      }
+    }
+
+    async function timer() {
+      let nowTime = 0;
+      while(1) {
+        await sleep(1000);
+        nowTime ++;
+        document.getElementById('time').innerText = nowTime;
+      }
+    }
+
+    timer();
+    main();
+  </script>
+</body>
+</html>
