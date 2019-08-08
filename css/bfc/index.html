@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>BFC demo</title>
+</head>
+
+<body>
+  <div class="header">
+    
+  </div>
+  <div class="main">
+    <h1>
+      BFC demo
+    </h1>
+    <div class="body-left part">
+      <h2>代码</h2>
+      <div class="content">
+        <article>
+          <p>
+            触发 BFC
+            只要元素满足下面任一条件即可触发 BFC 特性：
+          </p>
+          <ul>
+            <li>body 根元素</li>
+            <li>浮动元素：float 除 none 以外的值</li>
+            <li>绝对定位元素：position (absolute、fixed)</li>
+            <li>display 为 inline-block、table-cells、flex</li>
+            <li>overflow 除了 visible 以外的值 (hidden、auto、scroll)</li>
+          </ul>
+        </article>
+        <article>
+          <h1>1. 同一个 BFC 下外边距会发生折叠</h1>
+          <p>从效果上看，因为两个 div 元素都处于同一个 BFC 容器下 (这里指 body 元素) 所以第一个 div 的下边距和第二个 div 的上边距发生了重叠，所以两个盒子之间距离只有 100px，而不是 200px。首先这不是 CSS 的 bug，我们可以理解为一种规范，如果想要避免外边距的重叠，可以将其放在不同的 BFC 容器中。</p>
+        </article>
+        <article>
+          <h1>2. BFC 可以包含浮动的元素（清除浮动）</h1>
+          <p>如右边示例👉，由于容器内元素浮动，脱离了文档流，所以容器只剩下 2px 的边距高度。如果使触发容器的 BFC，那么容器将会包裹着浮动元素。</p>
+        </article>
+        <article>
+          <h1>3. BFC 实现两列自适应布局</h1>
+          <p>如右边示例👉，左边块块设置了浮动，正常来说，右块文字会围绕左块，触发BFC后，就相当于独立的容器。</p>
+        </article>
+
+
+          
+          
+      </div>
+    </div>
+    <div class="body-right part">
+      <h2>效果</h2>
+      <div class="input-range">
+        宽度调节(200-500)：<input type="range" min="100" max="600" oninput="demo.style.width = this.value + 'px'">
+        <br />
+        字号调节(12-18)：<input type="range" min="10" max="20" oninput="demo.style.fontSize = this.value + 'px'">
+      </div>
+      <div class="show" id="demo" style="font-size: 14px; width: 300px;">
+        <h1>1. 同一个 BFC 下外边距会发生折叠</h1> 
+        <div class="demo1">
+          <div></div>
+          <div></div>
+        </div>
+        <h2>触发BFC</h2> 
+        <div class="demo2">
+          <div class="container">
+            <p></p>
+          </div>
+          <div class="container">
+            <p></p>
+          </div>
+        </div>
+
+        <h1>2. BFC 可以包含浮动的元素（清除浮动）</h1> 
+        <div class="demo3">
+          <div></div>
+        </div>
+
+        <h1>3. BFC 实现两列自适应布局</h1> 
+        <div class="demo4">
+          <div class="left">我是左边块块，我浮动了</div>
+          <div class="right">我是右边块块，我要独立的空间</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="footer">
+    我的有底线的
+  </div>
+</body>
+
+</html>
