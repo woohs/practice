@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.4597f50a.chunk.css",
-    "main.js": "/static/js/main.a1bbc86b.chunk.js",
-    "main.js.map": "/static/js/main.a1bbc86b.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.73f45d9f.js",
-    "runtime~main.js.map": "/static/js/runtime~main.73f45d9f.js.map",
-    "static/js/2.5da88a2c.chunk.js": "/static/js/2.5da88a2c.chunk.js",
-    "static/js/2.5da88a2c.chunk.js.map": "/static/js/2.5da88a2c.chunk.js.map",
-    "static/css/3.efa2538c.chunk.css": "/static/css/3.efa2538c.chunk.css",
-    "static/js/3.56d3e254.chunk.js": "/static/js/3.56d3e254.chunk.js",
-    "static/js/3.56d3e254.chunk.js.map": "/static/js/3.56d3e254.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ae912882d0e8ed2239216643828279f2.js": "/precache-manifest.ae912882d0e8ed2239216643828279f2.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/3.efa2538c.chunk.css.map": "/static/css/3.efa2538c.chunk.css.map",
-    "static/css/main.4597f50a.chunk.css.map": "/static/css/main.4597f50a.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/demo/react/lazy-demo/build/static/css/main.eac06a09.chunk.css",
+    "main.js": "/demo/react/lazy-demo/build/static/js/main.c1d8b90f.chunk.js",
+    "main.js.map": "/demo/react/lazy-demo/build/static/js/main.c1d8b90f.chunk.js.map",
+    "runtime~main.js": "/demo/react/lazy-demo/build/static/js/runtime~main.38e81fa6.js",
+    "runtime~main.js.map": "/demo/react/lazy-demo/build/static/js/runtime~main.38e81fa6.js.map",
+    "static/js/2.da813f72.chunk.js": "/demo/react/lazy-demo/build/static/js/2.da813f72.chunk.js",
+    "static/js/2.da813f72.chunk.js.map": "/demo/react/lazy-demo/build/static/js/2.da813f72.chunk.js.map",
+    "static/css/3.71635b1f.chunk.css": "/demo/react/lazy-demo/build/static/css/3.71635b1f.chunk.css",
+    "static/js/3.3edc8846.chunk.js": "/demo/react/lazy-demo/build/static/js/3.3edc8846.chunk.js",
+    "static/js/3.3edc8846.chunk.js.map": "/demo/react/lazy-demo/build/static/js/3.3edc8846.chunk.js.map",
+    "index.html": "/demo/react/lazy-demo/build/index.html",
+    "precache-manifest.2a8635b6247c917af6ce8d968146a399.js": "/demo/react/lazy-demo/build/precache-manifest.2a8635b6247c917af6ce8d968146a399.js",
+    "service-worker.js": "/demo/react/lazy-demo/build/service-worker.js",
+    "static/css/3.71635b1f.chunk.css.map": "/demo/react/lazy-demo/build/static/css/3.71635b1f.chunk.css.map",
+    "static/css/main.eac06a09.chunk.css.map": "/demo/react/lazy-demo/build/static/css/main.eac06a09.chunk.css.map",
+    "static/media/logo.svg": "/demo/react/lazy-demo/build/static/media/logo.ee7cd8ed.svg"
   }
 }

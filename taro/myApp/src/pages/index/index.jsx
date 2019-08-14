@@ -1,6 +1,8 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import { View, Text, Button } from '@tarojs/components'
 import './index.less'
+import Demo from "./Child";
+import Head from "../../components/head/head";
 
 export default class Index extends Component {
 
@@ -8,9 +10,14 @@ export default class Index extends Component {
     navigationBarTitleText: '首页'
   }
 
+  state = {
+    name: '张三',
+  }
+
   componentWillMount () { }
 
-  componentDidMount () { }
+  componentDidMount () {
+   }
 
   componentWillUnmount () { }
 
@@ -18,10 +25,23 @@ export default class Index extends Component {
 
   componentDidHide () { }
 
+  handleClick = () => {
+    this.setState({
+      name: '李四'
+    })
+  }
+
+  change = (e) => {
+    this.setState({
+      name: '小王'
+    })
+    console.log('change', e);
+  }
+
   render () {
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
+        <Head />
       </View>
     )
   }
