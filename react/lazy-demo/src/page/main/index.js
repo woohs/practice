@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom';
 import './App.css';
 import ModalDemo from '../modal-demo';
 import Header from './../../components/header';
+import shouldUpdate from '../shouldUpdateTest';
 
 function Main() {
   return (
@@ -29,6 +30,7 @@ class App extends React.Component {
               <ul className="App-nav">
                 <li><Link to="/">关于</Link></li>
                 <li><Link to="/modal/">modal-弹窗</Link></li>
+                <li><Link to="/should_update_test/">组件渲染</Link></li>
                 <li><Link to="/users/">Users</Link></li>
               </ul>
             </nav>
@@ -37,6 +39,7 @@ class App extends React.Component {
             <Route path="/" exact component={Main} />
             <Route path="/modal" exact component={ModalDemo} />
             <Route path="/users" exact component={Users} />
+            <Route path="/should_update_test" exact component={shouldUpdate} />
           </div>
         </div>
         <footer className="footer">
