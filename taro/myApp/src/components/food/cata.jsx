@@ -21,7 +21,9 @@ class Cata extends Component {
   }
 
   handleClick = (value) => {
-    this.setState({selectCata: value.id});
+    this.setState({selectCata: value.id}, () => {
+      this.props.onChangeCara(value)
+    });
   }
 
   render() {
@@ -29,7 +31,7 @@ class Cata extends Component {
     return (
       <View className='cata'>
         {cata.map((item, index) => (
-          <Text 
+          <Text
             onClick={() => this.handleClick(item)}
             key={index} 
             className={'cata_text ' + (selectCata === item.id ? 'select' : '')}
