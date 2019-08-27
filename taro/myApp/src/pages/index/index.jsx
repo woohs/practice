@@ -3,6 +3,7 @@ import { View } from '@tarojs/components'
 import './index.less'
 import Head from "../../components/head/head";
 import Food from "../../components/food/food";
+import myEvent from "../../utils/event";
 
 export default class Index extends Component {
 
@@ -13,7 +14,13 @@ export default class Index extends Component {
   componentWillMount () { }
 
   componentDidMount () {
-   }
+    myEvent.on('add', () => {
+      console.log('add');
+    })
+    myEvent.on('cut', () => {
+      console.log('cut');
+    })
+  }
 
   componentWillUnmount () { }
 

@@ -1,5 +1,5 @@
 import Taro, { Component } from "@tarojs/taro";
-import { View } from "@tarojs/components";
+import { View, ScrollView } from "@tarojs/components";
 import { AtTabs, AtTabsPane} from 'taro-ui';
 import "./food.less";
 import Cata from "./cata";
@@ -67,13 +67,23 @@ class Food extends Component {
 
   render() {
     const { current, tabList, currentCata, selectCata } = this.state;
+    const scrollStyle = {
+      height: window.innerHeight - 220,
+    }
+    const scrollTop = 0;
     return (
       <View>
         <AtTabs current={current} tabList={tabList} onClick={this.handleClick} >
           <AtTabsPane>
             <View className='fooe_body'>
               <Cata onChangeCara={this.onChangeCara} />
-              <FoodList selectCata={selectCata} currentCata={currentCata} />
+              {/* <ScrollView
+                scrollY
+                scrollTop={scrollTop}
+                style={scrollStyle}
+              > */}
+                <FoodList selectCata={selectCata} currentCata={currentCata} />
+              {/* </ScrollView> */}
             </View>
           </AtTabsPane>
           <AtTabsPane>评价</AtTabsPane>
