@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lazy img</title>
+  <style>
+    .container {
+      background: #3333;
+    }
+    .container img {
+      display: block;
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img data-src="https://user-gold-cdn.xitu.io/2019/11/4/16e33fa64a08d43b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+    <img data-src="https://user-gold-cdn.xitu.io/2019/11/4/16e33fa64a08d43b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+    <img data-src="https://user-gold-cdn.xitu.io/2019/11/4/16e33fa64a08d43b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+    <img data-src="https://user-gold-cdn.xitu.io/2019/11/4/16e33fa64a08d43b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+    <img data-src="https://user-gold-cdn.xitu.io/2019/11/4/16e33fa64a08d43b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+    <img data-src="https://user-gold-cdn.xitu.io/2019/11/4/16e33fa64a08d43b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+    <img data-src="https://user-gold-cdn.xitu.io/2019/11/4/16e33fa64a08d43b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+    <img data-src="https://user-gold-cdn.xitu.io/2019/11/4/16e33fa64a08d43b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+  </div>
+
+  <script>
+    // 1 使用scroll，监听 Element.getBoundingClientRect() 使用节流，
+    // function setImgSrc() {
+    //   document.querySelectorAll('img').forEach(item => {
+    //     if(item.getBoundingClientRect().top < document.body.clientHeight) {
+    //       item.src = item.dataset.src;
+    //     }
+    //   })
+    // }
+    // function throttle(cb, delay = 200){
+    //   var _this = this;
+    //   let now = Date.now();
+    //   return function (e) {
+    //     console.log("TCL: throttle -> e", e)
+    //     if(Date.now() - now < delay) return;
+    //     cb && cb.apply(_this,arguments);
+    //     now = Date.now();
+    //   }
+    // }
+    // let throttleScroll = throttle(setImgSrc);
+    // window.addEventListener('scroll', e => {
+    //   throttleScroll(e)
+    // })
+
+    // 2 使用IntersectionObserver API，一步到位
+    const observer = new IntersectionObserver((changes) => {
+      // changes: 目标元素集合
+      changes.forEach((change) => {
+        // intersectionRatio
+        if (change.isIntersecting) {
+          const img = change.target
+          img.src = img.dataset.src
+          observer.unobserve(img)
+        }
+      })
+    })
+
+    document.querySelectorAll('img').forEach(item => {
+      observer.observe(item)
+    })
+   
+  </script>
+</body>
+</html>
